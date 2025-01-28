@@ -1,4 +1,9 @@
-﻿namespace COMP003A.LectureActivity3_2
+﻿// Author: Riley Benson
+// Course: COMP-003A
+// Faculty: Jonathan Cruz
+// Purpose: Demonstrate iterative statements in C#.
+
+namespace COMP003A.LectureActivity3_2
 {
     internal class Program
     {
@@ -31,6 +36,32 @@
                 Console.WriteLine($"{reverse} x {num} = {reverse * num}");
                 // decrement reverse
                 reverse--;
+            }
+            // Display fibonacci series using a do-while loop
+            Console.WriteLine("\nFibonacci Series:");
+            int firstNumber = 0, secondNumber = 1, nextNumber; // first two numbers
+            Console.Write($"{firstNumber} {secondNumber} "); // display first two numbers
+            int count = 2; // count starts at 2
+            // loop to generate the next 10 numbers in the series
+            do
+            {
+                nextNumber = firstNumber + secondNumber; // calculate next number
+                Console.Write($"{nextNumber} "); // display next number
+                firstNumber = secondNumber; // update first number
+                secondNumber = nextNumber; // update second number
+                count++; // increment count
+            } while (count < 10); // loop until count reaches 10
+            // Display favorite fruits in a collection using a foreach loop
+            // Create an array of fruits
+            string[] fruits = { "Apple", "Banana", "Pear", "Strawberry" };
+
+            Console.WriteLine("\n");
+            // Display each fruit using a foreach loop
+            Console.WriteLine("Your favorite fruits are:");
+            // Loop through each fruit in the array
+            foreach (string fruit in fruits)
+            {
+                Console.WriteLine($"- {fruit}");
             }
         }
     }
